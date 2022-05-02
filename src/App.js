@@ -1,21 +1,23 @@
 import "./App.css";
 import BarraMenu from "./componentes/barraMenui";
-import Ropa from "./componentes/Ropa";
+import {BrowserRouter as Router} from 'react-router-dom';
+import Rutas from "./services/Rutas";
 
 function App() {
-  const mensaje = () => {
-    console.log("Hola a todos");
-  };
+  
 
   return (
+    <Router>
     <div className="container">
       <section>
+        
         <BarraMenu />
-      </section>
-      <section>
-        <Ropa />
+        
       </section>
     </div>
+    <Rutas/>
+    
+    </Router>
   );
 }
 
